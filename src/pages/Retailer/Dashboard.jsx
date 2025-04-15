@@ -27,8 +27,10 @@ import {
   CircleDollarSign,
   ShoppingBag,
   Settings,
+  LogOut,
 } from "lucide-react";
 import RetailerSidebar from "../../components/RetailerSidebar";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [selectedPeriod, setSelectedPeriod] = useState("weekly");
@@ -342,14 +344,19 @@ const Dashboard = () => {
       {/* Sidebar Navigation */}
       <div className="w-64 bg-green-800 text-white">
         <div className="p-6">
-          <h1 className="text-2xl font-bold mb-1">Farm Fresh</h1>
+          <h1 className="text-2xl font-bold mb-1">AgriConnect</h1>
           <p className="text-green-200 text-sm">Retailer Dashboard</p>
         </div>
 
         <RetailerSidebar />
-
+        
         <div className="absolute bottom-0 p-4 w-64">
+        <div className="px-4 bottom-0 py-3 flex items-center space-x-3 ">
+        <LogOut className="w-5 h-5" />
+        <Link to='/login' className="font-medium">Log out</Link>
+      </div>
           <div className="flex items-center space-x-3 py-3">
+         
             <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center">
               <User className="w-5 h-5" />
             </div>

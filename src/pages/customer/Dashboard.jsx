@@ -17,6 +17,7 @@ import {
   LogOut,
   Settings,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Mock Product Data
 const MOCK_PRODUCTS = [
@@ -97,7 +98,7 @@ const TopNavbar = ({ activeTab, setActiveTab, cartItems }) => {
       <div className="container mx-auto flex justify-between items-center py-4 px-4">
         {/* Logo */}
         <div className="flex items-center">
-          <span className="text-2xl font-bold text-green-800">FarmConnect</span>
+          <span className="text-2xl font-bold text-green-800">AgriConnect</span>
         </div>
 
         {/* Navigation Items */}
@@ -131,14 +132,14 @@ const TopNavbar = ({ activeTab, setActiveTab, cartItems }) => {
             {isProfileDropdownOpen && (
               <div className="absolute right-0 top-full mt-2 w-48 bg-white shadow-lg rounded-lg border border-green-100">
                 {profileDropdownItems.map((item) => (
-                  <button
+                  <Link to='/login'
                     key={item.name}
                     onClick={item.action}
                     className="flex items-center w-full px-4 py-2 hover:bg-green-50 transition-colors"
                   >
                     <item.icon className="w-5 h-5 mr-3 text-green-600" />
                     {item.name}
-                  </button>
+                  </Link>
                 ))}
               </div>
             )}

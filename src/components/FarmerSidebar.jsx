@@ -168,7 +168,7 @@ const FarmerSidebar = ({ user }) => {
 
       {/* Footer */}
       <div className="absolute bottom-0 w-full p-4 border-t border-white/10">
-        <button
+        <Link to='/login'
           className={`
             flex 
             items-center 
@@ -187,7 +187,7 @@ const FarmerSidebar = ({ user }) => {
             `}
           />
           {expanded && <span className="text-sm">Logout</span>}
-        </button>
+        </Link>
       </div>
     </div>
   );

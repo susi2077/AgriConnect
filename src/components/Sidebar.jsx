@@ -143,7 +143,7 @@ const Sidebar = ({ user }) => {
               clipRule="evenodd"
             />
           </svg>
-          {expanded && <span>Logout</span>}
+          {expanded && <Link to='/login'>Logout</Link>}
         </button>
       </div>
     </div>
